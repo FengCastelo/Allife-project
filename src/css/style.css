@@ -1,0 +1,255 @@
+:root{
+    --verde:#77ffa4;
+    --azul:#769aff;
+    --azulescuro:#011f57;
+    --bg:#08368a;
+    --branco: #fff;
+    font-size: 10px;
+}
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+body{
+    background-color: #e8f0ff;
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    border-bottom:0.1rem solid #ffffff;
+    background: var(--bg);
+    
+   
+}
+.header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+.navbar a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color:var(--branco);
+    font-weight: bold;
+}
+.navbar a:hover{
+    color:var(--azul);
+}
+
+.icons img{
+    margin: 1rem;
+    cursor:pointer;
+}
+
+.icons img:hover{
+    width: 29px;
+    height: 29px;
+}
+
+.btn{
+    background: var(--verde);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-transform:none;
+}
+
+.btn:hover{
+    color:#329c52;
+    font-size: 1.9rem;
+}
+
+.home-container{
+    background: url("../images/IMG_2025.jpeg");
+    background-size: cover;
+}
+
+.home-container section{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.conteudo{
+    max-width: 60rem;
+
+}
+
+.conteudo h3{
+    color: #fff;
+    font-size: 6rem;
+    padding-bottom: 15px;
+}
+
+.conteudo p{
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.conteudo .title{
+    font-size: 5rem ;
+    color: var(--bg);
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+
+}
+
+
+.sobre .row{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    max-height: auto;
+}
+
+.sobre .row .conteudo{
+    padding: 8rem;
+}
+
+.sobre .row .conteudo h2{
+    font-size: 5rem;
+    padding-bottom: 15px;
+    color:#fff;
+}
+
+.sobre .row .conteudo p{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.dicaSecao{
+    display: column;
+    justify-content: center;
+    padding-top: 150px;
+    background:var(--bg);
+    max-width: 1200px;
+    box-sizing: border-box;
+    height: 800px;
+}
+
+.dicaSecao h2{
+    font-size: 5rem;
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.dicaSecao .caixaDica{
+    background: var(--azulescuro);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    height: 300px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dicaSecao .caixaDica h3{
+    color: var(--branco);
+    font-size: 3rem;
+    text-align: center;
+    text-transform: none;
+
+}
+
+.dicaSecao .caixaDica p{
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+#btnDica{
+    display: flex;
+    justify-content: center;
+}
+
+#btnDica button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+footer{
+    background: var(--bg);
+    border-top:0.1rem solid #ffffff;
+    color: #fff;
+    padding-top: 50px;
+    font-family: "Roboto", sans-serif;
+    width: 100%;;
+    
+  
+ 
+}
+
+.footerPrincipal{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerLogo{
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footerContatos h1{
+    font-weight: bolder;
+    color: var(--branco);
+    margin-bottom: 20px;
+
+}
+
+.contatoIcones{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.contatoIcones img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}

@@ -1,0 +1,126 @@
+.centralizador {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+}
+
+.caixa_selecao {
+    height: 70vh ;
+    width: 50vw;
+    background-color: var(--white);
+    border: 3px var(--black) solid;
+    transform:translate(-50%, -50%);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    color: var();
+}
+
+
+.header_selecao {
+    height: 10%;
+    width: 100%;
+    padding: 0.3rem;
+    background-color: var(--white);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    border-bottom: 5px var(--main-color2) solid;
+}
+
+.caixa_botao_fechar {
+    font-size: 1.3rem;
+    width: fit-content;
+    top: 0.4rem;
+    right: 2rem;
+    position: absolute;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.caixa_botao_fechar:hover {
+    background-color: var(--bg2);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.body_selecao {
+    height: 85%;
+    width: 95%;
+    background-color: var(--white);
+    border: 3px solid var(--blue2);
+    margin: auto;
+    overflow-y: auto; /* Quando usar margin auto junto do display flex ele centraliza */
+
+}
+
+/* Caixa de selecionar refeição--------- */
+.caixa_selecionar_refeicao {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--bg);
+    display: grid;
+    justify-content: center;
+    
+}
+
+.containers_checkbox_refeicao {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    gap: 5rem;
+}
+
+.caixa_selecionar_refeicao p {
+    margin-top: 1rem;
+}
+
+/*---------- Caixa de cada alimentos-------- */
+.alimento_selecao {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 100%;
+    background-color: var(--white);
+    border: var(--border);
+    color: black;
+    padding: 0.1rem;
+    
+}
+
+.alimento_selecao  .selecao_macronutri{
+    display: flex;
+    padding: 0.2rem;
+    gap: 1rem;
+}
+
+.botao {
+    height: 2rem;
+    width: 5rem;
+    position:relative;
+    left: 10rem;
+    bottom: 1rem;
+}
+
+/* --caixa alimentos--------- */
+
+/* Criando o modal sem scroll com um fundo cinza */
+/* Quando o objeto no final do html com o nome modal recebe a classe "modal ativo" ele surge */
+.modal_ativo {
+    overflow: hidden;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 900;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+/* Aparecer e sumir a janela, quando a janela tem essa classe ela some*/
+.abrir_fechar_janela {
+    display: none;
+}
+

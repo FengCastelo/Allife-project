@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="stylesheet" type="text/css" href="../css/style2.css">
+</head>
+<body>
+    
+    
+    <a href="../../index.html" class="logosite"><img src="../images/logo cortada.png" alt="logo site"></a>
+    <div  class="localcadastro">                                     <!--GET USADO PQ LIVE SERVE NAO GOSTA DE POST-->
+        <form id="formcadastro" name="formcadastro" action="pagina_dieta.html" method="POST" class="painelcadastro"><!--form agrupa os campos e dita o que fazer com os dados após o clique no botão de envio-->
+
+            <div class="barra1">
+                <label>Nome</label><!--label serve para dar um rotulo para o input-->
+                <input type="text" name="nome" id="nome" placeholder="digite seu nome" class="barracadastro"><!--input e a entrada de dados onde o usuario pode escrever ou mandar dados e o type e que tipo de dado o input vai receber-->
+            </div>  
+
+            <div class="barra2">
+                <label>Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="digite seu sobrenome" class="barracadastro">
+            </div>
+
+            <div class="barra3">
+                <label>Email</label>
+                <input type="email" name="email" id="email" placeholder="digite seu email" class="barracadastro">
+            </div>
+
+            <div class="barra4">
+                <label>Telefone</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Ex. 85998765432" class="barracadastro">
+            </div>
+
+            <div class="barra5">
+                <label>Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="digite sua senha" class="barracadastro">
+            </div>
+
+            <div class="barra6">
+                <label>Confirma Senha</label>
+                <input type="password" name="senha1" id="senha1" placeholder="digite novamente" class="barracadastro">
+            </div>
+            <a href="../pages/login.html" class="levalogin">
+            <p>Já tem uma conta?</p></a>
+            <button type="submit" class="botaocadastrar">CADASTRAR</button>
+            <h1 class="textcadastro">CADASTRE-SE</h1>
+        </form>
+    </div>
+
+
+    <script src="../js/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  display: flex;
+  background-color: #e8f0ff;
+  height: 100vh;
+  width: 100vw;
+  /* place-items substitui align-items e justify-items em uma linha só */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logosite img{ 
+  position: absolute;
+  height: 5rem;
+  top: 10%;
+  left: 10%;
+}
+
+.painelcadastro {
+  display: grid;
+  grid-template-columns: repeat(24, 25px); /*Define o número e a largura das colunas*/
+  grid-template-rows: repeat(26, 25px); /*Define o número e a altura das linhas*/
+  width: fit-content;
+  font-family: "Roboto", sans-serif;/* Define a fonte */
+  font-size: 18px;/* Tamanho da fonte */
+  background-color: #ffffff;/* Fundo branco */
+  border-radius: 20px;/* Arredondamento dos cantos */
+  box-shadow: 0 5px 15px;/* Adiciona sombra */
+}
+.textcadastro {/* Posiciona o texto do cadastro na grid*/
+  grid-row: 1;/*posiciona o grid na linha de altura*/
+  grid-column: 8 / 20;/*posiciona o grid na linha de largura*/
+}
+.botaocadastrar {
+  grid-row: 24;
+  grid-column: 9/ 16;
+  margin-top: -10px;/*move a margem do botão*/
+  text-align: center;/*alinha o botao no centro*/
+  border: solid; /* Borda sólida */
+  border-radius: 8px; /* Arredonda as bordas */
+  border-color: rgb(226, 226, 226); /* Cor da borda */
+  padding: 8px 35px; /* Preenchimento interno */
+  cursor: pointer; /* Muda o cursor para indicar clicável */
+}
+.botaocadastrar:active {
+  transform: scale(1.05); /* Aumenta o botão em 5% para dar feedback visual */
+  transition: all 0.3 ease; /* Suaviza o efeito de transformação por 0.3s */
+  border-color: rgb(255, 255, 255); /* Borda branca (desaparece) */
+  color: white; /* muda a cor do texto para branco*/
+}
+.levalogin {/*texto de 'ja tem uma conta?' que fica no cadastro*/
+  font-size: 15px;
+  grid-row: 22;
+  grid-column: 7/ 20;
+}
+.barra1 {/*posiciona a barra na grid do cadastro*/
+  grid-row: 4;
+  grid-column: 7;
+}
+
+.barra2 {/*posiciona a barra na grid do cadastro*/
+  grid-row: 7;
+  grid-column: 7;
+}
+.barra3 {/*posiciona a barra na grid do cadastro*/
+  grid-row: 10;
+  grid-column: 7;
+}
+.barra4 {/*posiciona a barra na grid do cadastro*/
+  grid-row: 13;
+  grid-column: 7;
+}
+.barra5 {/*posiciona a barra na grid do cadastro*/
+  grid-row: 16;
+  grid-column: 7;
+}
+.barra6 {/*posiciona a barra na grid do cadastro*/
+  grid-row: 19;
+  grid-column: 7 / 20;
+}
+.barracadastro {/*define a aparencia das barras do cadastro*/
+  box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+  font-size: 20px;  /* Tamanho do texto de entrada */
+  border: solid; /* Borda sólida */
+  border-radius: 10px; /* Arredondamento da borda */
+  border-color: rgb(226, 226, 226); /* Cor da borda (cinza claro) */
+  padding-right: 50px; /* Espaço à direita do texto digitado */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.textlogin {/* Posiciona o texto do login na grid*/
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  grid-row: 1;
+  grid-column: 6 / 25;
+}
+
+
+.painellogin {
+  display: grid;
+  grid-template-columns: repeat(24, 25px); /*Define o número e a largura das colunas*/
+  grid-template-rows: repeat(40, 10px); /*Define o número e a altura das linhas*/
+  font-family: "Roboto", sans-serif; /* Define a fonte */
+  font-size: 18px; /* Tamanho da fonte */
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 20px; /* Arredondamento dos cantos */
+  background-position: right 25px center; /* Posiciona o backgrounddo painel */
+  box-shadow: 0 5px 15px;  /* Adiciona sombra */
+}
+.loginbar1 {/*posiciona a barra na grid do login*/
+  grid-row: 14;
+  grid-column: 7 / 20;
+}
+.loginbar2 {/*posiciona a barra na grid do login*/
+  grid-row: 22;
+  grid-column: 7 / 20;
+}
+
+.barralogin {/*define a aparencia das barras do cadastro*/
+  box-sizing: border-box;/* Inclui padding e border no tamanho total do elemento */
+  font-size: 20px; /* Tamanho do texto de entrada */
+  border: solid; /* Borda sólida */
+  border-radius: 10px; /* Arredondamento da borda */
+  border-color: rgb(226, 226, 226); /* Cor da borda (cinza claro) */
+  padding-right: 50px; /* Espaço à direita do texto digitado */
+  text-align: left;/* Alinha o texto à esquerda */
+}
+
+.entrar {
+  grid-row: 33;
+  grid-column: 9 / 17;
+  margin-top: -25px;/*move a margem do botão*/
+  text-align: center; /*alinha o botao no centro*/
+  border: solid; /* Borda sólida */
+  border-radius: 8px; /* Arredonda as bordas */
+  border-color: rgb(226, 226, 226); /* Cor da borda */
+  padding: 8px 35px; /* Preenchimento interno */
+  cursor: pointer; /* Muda o cursor para indicar clicável */
+}
+
+.entrar:active {
+  transform: scale(1.05); /* Aumenta o botão em 5% para dar feedback visual */
+  transition: all 0.3 ease; /* Suaviza o efeito de transformação por 0.3s */
+  border-color: rgb(255, 255, 255); /* Borda branca (desaparece) */
+  color: white; /* muda a cor do texto para branco*/
+}

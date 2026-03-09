@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dieta</title>
+    <link rel="stylesheet" href="/src/css/estilo_dieta.css" />
+    <link rel="stylesheet" href="/src/css/estilo_janela.css">
+    <script src="/src/js/dieta.js" defer ></script>
+  </head>
+  <body>
+
+    <!-- LInha superior da página------------------------------------------------------------------------ -->
+    <header class="header">
+      <section>
+        <a href="/index.html" class="logo">
+          <img
+            src="/src/images/logoallife3.png"
+            alt="logo"
+            width="50"
+            height="50"
+          />
+        </a>
+
+        <nav class="navbar">
+          <a href="/index.html">Home</a>
+        </nav>
+
+        <div class="icons">
+          <img src="/src/images/icons8-usuário-24.png" alt="usuariologo" />
+        </div>
+      </section>
+    </header>
+    <!-- Fim da linha superior da página ------------------------------------------------------------------------------>
+     
+    
+    <!-- Inicio da caixa de progresso (a caixa lateral)------------------------------------------------------------->
+
+    <main>
+      <div class="caixa_de_progresso caixa_de_progresso_sidebar">
+
+        <h2 class="item_caixa"> Suas informações:</h2>
+
+        <div class="status6 item_caixa">
+          <p>Carboidratos</p>
+          <p>300g</p>
+        </div>
+        
+        <div class="status7 item_caixa">
+          <p>Proteínas</p>
+          <p>114g</p>
+        </div>
+        
+        <div class="status8 item_caixa">
+          <p>Gorduras</p>
+          <p>60g</p>
+        </div>
+
+        <div class="status1 item_caixa">
+          <p>Meta de peso</p>
+          <p>80</p>
+        </div>
+        
+        <div class="status2 item_caixa">
+          <p>Peso atual</p>
+          <p>75</p>
+        </div>
+        
+        <div class="status3 item_caixa">
+          <p>Gasto Basal</p>
+          <p>1500</p>
+        </div>
+        
+        <div class="status4 item_caixa">
+          <p>Meta de calorias</p>
+          <p>1600 Kcal</p>
+        </div>
+        
+        <div class="status9 item_caixa">
+          <p>IMC</p>
+          <p>19 kg/m2</p>
+        </div>
+      </div>
+      <!-- FIm da caixa de progresso -------------------------------------------------------------------------->
+      
+      <!-- Inicio da caixa principal da dieta----------------------------------------------------------- -->
+      
+      
+      <div class="centralizar_conteudo">
+        <div class="bemvindo">
+        <h1>SEJA BEM VINDO!</h1>
+        </div>
+        <section class="caixa_sessao"> <!--Caixa principal de todo o conteudo do site-->
+          
+          <button class="adicione_dieta" id="add_alimento" ><!-- botão para adicionar dieta -->
+        <!--SVG é um formato de imagem que pode ser alteravel-->
+            <svg  
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-plus"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <p>Adicionar alimentos</p> 
+            <!-- Não se preocupe com esse código todo eu só copiei e colei do site de imagens -->
+            
+          </button>
+        
+          <!-- cafe da manha -------------------------------------------------->
+          <section class="cafe_da_manha caixa_refeicao" id="registro_cafe">
+            <h2>Café da manhã</h2>
+        
+            <template id="template"> 
+              <div class="alimento_registrado">
+                <a class="TemplateNome">Arroz</a>
+                <p>Gordura: <span class="TemplateGord"></span>(100)gramas</p>
+                <p>Carboidratos: <span class="TemplateCarb"></span>(100)gramas</p>
+                <p >Proteinas: <span class="TemplateProt"></span>(100)gramas</p>
+                <button class="botao_remover" id="botao_remover">Remover</button>
+              </div>
+            </template>
+            
+          </section>
+        
+          <!-- almoco------------------------------------------------------------->
+          <section class="almoco caixa_refeicao" id="registro_almoco">
+            <h2>Almoço</h2>
+          </section>
+        
+          <!-- janta --------------------------------------------------------------------->
+          <section class="janta caixa_refeicao" id="registro_janta">
+            <h2>Janta</h2>
+          </section>
+            
+        
+        </section> 
+      </div>
+
+      <!-- Conteúdo da janela aberta de adicionar os alimentos-------------------------------------------- -->
+
+       <div class="centralizador abrir_fechar_janela" id="caixa_add">
+
+        <!-- "Caixa selecao" é o container principal -->
+        <div class="caixa_selecao" id="caixa_selecao"> 
+            
+        <div class="header_selecao">
+            <div class="header_divisao">
+                <p>Selecione os alimentos</p>
+            </div>
+            <div id="botao_fechar" class="caixa_botao_fechar">Voltar</button> <!--Botao de fechar janela-->
+            </div>
+        </div>
+        
+        <!-- Local onde estão alimentos da janela aberta e as checkbox------------------------ -->
+        <div class="body_selecao">
+
+            <!-- Caixa especifica das checkbox -->
+            <div class="caixa_selecionar_refeicao">
+
+              
+                <p>Deseja adicionar em qual refeição?</p>
+              
+
+              <div class="containers_checkbox_refeicao">
+                <div class="selecionar_refeicao">
+                  <label for="checkbox_manha">Café da manhã</label>
+                  <input type="checkbox" id="checkbox_manha" name="refeicao" value="cafe_da_manha">
+                </div>
+                
+                <div class="selecionar_refeicao">
+                  <label for="checkbox_almoco"> Almoço </label>
+                  <input type="checkbox" id="checkbox_almoco" name="refeicao" value="almoco">
+                </div>
+                
+                <div class="selecionar_refeicao">
+                  <label for="checkbox_janta"> Janta </label>
+                  <input type="checkbox" id="checkbox_janta" name="refeicao" value="janta">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Todos os alimentos registrados------------------------------------ -->
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Arroz"
+                  data-carb="28.18"
+                  data-prot="2.5"
+                  data-gord="0.23"
+                  data-id="1"
+                >Arroz Branco(100g)</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:0,23g</p>
+                  <p>Carb:28,18g</p>
+                  <p>Prot: 2,5g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Feijão"
+                  data-carb="13.61"
+                  data-prot="5.04"
+                  data-gord="0.85"
+                  data-id="2"
+                >Feijão(100g)</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:0.23g</p>
+                  <p>Carb:13,61g</p>
+                  <p>Prot: 5,04g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Bife"
+                  data-carb="0"
+                  data-prot="27.29"
+                  data-gord="15.01"
+                  data-id="3"
+                >Bife(100g)</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:15,01g</p>
+                  <p>Carb:0g</p>
+                  <p>Prot: 27,29g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Salada de alface"
+                  data-carb="3.14"
+                  data-prot="2.5"
+                  data-gord="0.15"
+                  data-id="4"
+                >Salada de alface(100g)</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:0.15g</p>
+                  <p>Carb:3,14g</p>
+                  <p>Prot 0,74g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Chocolate"
+                  data-carb="14.85"
+                  data-prot="1.91"
+                  data-gord="7.42"
+                  data-id="5"
+                >Chocolate</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:7,42g</p>
+                  <p>Carb:14,85g</p>
+                  <p>Prot: 1,91g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Torrada"
+                  data-carb="28.18"
+                  data-prot="2.5"
+                  data-gord="0.23"
+                  data-id="6"
+                >Torrada(100g)</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:0.23g</p>
+                  <p>Carb:28,18g</p>
+                  <p>Prot: 2,5g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+            <div class="alimento_selecao" >
+                <a class="nome_alimento" id="data_alimento"
+                  data-nome="Café"
+                  data-carb="28.18"
+                  data-prot="2.5"
+                  data-gord="0.04"
+                  data-id="6"
+                >Torrada(100g)</a>
+                <div class="selecao_macronutri">
+                  <p>Gord:0.23g</p>
+                  <p>Carb:0,07g</p>
+                  <p>Prot: 2,5g</p>
+                  
+                  <button class="confirmar_alimento botao" id="confirmar_alimento"
+                  >Adicionar</button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        </div> <!-- Fim janela aberta------------------------------------------------------>
+
+       </div>
+
+       <!-- Modal -->
+        <!-- MOdal é o fundo preto que fica de trás quando a janela abre -->
+       <div id="modal" ></div>
+
+    </main>
+  </body>
+</html>

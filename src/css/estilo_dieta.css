@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=TASA+Orbiter:wght@400..800&display=swap');
+
+:root{
+    --main-color:#77ffa4;
+    --main-color2: #23ff6c;
+    --blue:#769aff;
+    --blue2:#08368a;
+    --bg:#e8f0ff;
+    --bg2:#b8cff8;
+    --border:0.1rem solid rgba(0, 0, 0, 0.3);
+    --white: white;
+    --black: black;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Nunito", sans-serif, serif;
+}
+
+p { font-family: "TASA orbiter", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin:0%;
+    padding:0%;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+/* Estilo da linha superior */
+
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom:0.1rem solid #ffffff;
+    background: var(--blue2);
+    
+   
+}
+.header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.navbar a{
+    margin: 0 1rem;
+    font-size: 1rem;
+    color:var(--bg2);
+    font-weight: bold;
+}
+.navbar a:hover{
+    color: var(--bg);
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Centralização de todo o conteúdo da página */
+body{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Estilizando a caixa de progresso e titulo principal*/
+
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100vw;
+    /* Imagem de fundo do site */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) ), url(/src/images/Group\ 1.svg) ;
+    background-size: auto, 200px;
+    background-repeat: repeat, repeat;
+
+}
+
+
+/* Estilo do titulo */
+.bemvindo {  /*Caixa do titulo bem vindo */
+    margin-top: 9rem;
+    height: fit-content;
+    width: 95%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-top: 0.5rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: var(--white);
+    border: 2px var(--black) solid;
+}
+
+.bemvindo h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: var(--blue2) 5px solid;
+    
+    
+}
+
+/* Caixa maior de todas as sessões */
+.caixa_sessao {
+    height: auto;
+    width: 95%;
+    background-color: var(--white);
+    margin-top: 1rem;
+    padding: 0.5rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    border: 2px solid var(--black);
+}
+
+.centralizar_conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* Estilo da caixa de progresso  */
+.caixa_de_progresso {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    border: 2px var(--black) solid;
+    grid-column: 1 / 2;
+    margin: auto;
+    margin-top: 15rem;
+    position: sticky;
+    top: 5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3rem);
+}
+
+.caixa_de_progresso .item_caixa:first-child, .item_caixa:last-child {
+    border-bottom:var(--main-color2) 5px solid ;
+
+}
+
+
+
+/* POsicionamento de cada status na caixa */
+
+/* O .item_caixa está centralizando o conteudo de cada
+status individualmente */
+.item_caixa{
+    width: max-content;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: var(--white);
+}
+
+.item_caixa {
+    border-bottom: var(--main-color) 3px solid;
+}
+
+
+/* Caixa de dieta */
+
+/* criando o botão e a janela de adicionar dieta */
+
+.adicione_dieta{
+    height: max-content;
+    width: max-content;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center ;
+    border: 1px 0px 1px 0px var(--bg) solid;
+    margin: 0.5rem;
+    background-color: var(--bg);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5rem;
+    
+    
+}
+
+.adicione_dieta:hover {
+    background-color: var(--bg2);
+    
+}
+
+/* Editando os alimentos registrados */
+
+.caixa_refeicao {
+    height: auto;
+    min-height: 18rem;
+    width: 100%;
+    background-color: var(--white);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-left: 5px solid var(--blue2);
+    border-right: 5px solid var(--blue2);
+}
+
+.caixa_refeicao h2 {
+    width: fit-content;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+    border-bottom: 2px var(--black) solid;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+/* Estilo dos alimentos registrados */
+.alimento_registrado {
+    height: auto;
+    width: 96%;
+    padding: 0.5em;
+    border-left: 1px var(--bg);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 1rem;
+    border-left: var(--blue) 5px solid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3) ;
+    background-color: var(--bg);
+}
+
+.botao_remover{
+height: auto;
+padding: 0.3rem;
+position: absolute;
+font-size: 1rem;
+right: 5%;
+top: 36%;
+background-color: var(--white);
+border-radius: 10%;
+color: var(--blue2);
+}
+
+.botao_remover:hover{
+background-color: var(--bg2);
+border-radius: 10%;
+cursor: pointer;
+}
+
+
+.alimento_registrado a {
+    width: 100%;
+}
+
+.alimento_registrado p {
+    margin-right: 3rem;
+}
